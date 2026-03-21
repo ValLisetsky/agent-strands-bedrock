@@ -8,7 +8,7 @@ The agent supports two operating modes controlled by the `AGENT_MODE` environmen
 
 | Mode | Model | Runtime |
 |------|-------|---------|
-| `local` | Ollama `DeepSeek-R1:8b` (configured via `LOCAL_MODEL_NAME`) | Local machine |
+| `local` | Ollama `qwen2.5:7b-instruct` (configured via `LOCAL_MODEL_NAME`) | Local machine |
 | `cloud` | AWS Bedrock `Claude Haiku 4.5` (configured via `CLOUD_MODEL_NAME`) | AWS AgentCore |
 
 The user interacts with the agent through a conversational terminal loop.
@@ -22,7 +22,7 @@ All sensitive configuration lives in a `.env` file (gitignored). A `.env.example
 | Variable | Required | Description | Example |
 |----------|----------|-------------|---------|
 | `AGENT_MODE` | Yes | Runtime mode | `local` or `cloud` |
-| `LOCAL_MODEL_NAME` | local mode | Ollama model name | `DeepSeek-R1:8b` |
+| `LOCAL_MODEL_NAME` | local mode | Ollama model name | `qwen2.5:7b-instruct` |
 | `CLOUD_MODEL_NAME` | cloud mode | Bedrock model ID | `anthropic.claude-haiku-4-5...` |
 | `AWS_REGION` | cloud mode | AWS region for Bedrock | `us-east-1` |
 | `AWS_ACCESS_KEY_ID` | cloud mode | AWS credentials | — |
