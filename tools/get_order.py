@@ -21,7 +21,7 @@ def get_order(customerId: str, orderId: str) -> str:
     )
 
     if match:
-        content = {"orderId": match["orderId"], "customerId": match["customerId"], "status": match["status"]}
+        content = {"orderId": match["orderId"], "customerId": match["customerId"]}
     else:
         content = {}
 
