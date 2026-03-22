@@ -2,11 +2,11 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-from agent.cloud import create_agent
+from agent.local import create_agent
 
 
 def main():
-    print("Starting order cancellation agent (cloud mode). Type 'exit' or 'quit' to stop.\n")
+    print("Starting order cancellation agent (local mode). Type 'exit' or 'quit' to stop.\n")
 
     agent = create_agent()
 
