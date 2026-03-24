@@ -1,0 +1,62 @@
+default_agent: main
+agents:
+  main:
+    name: main
+    language: python
+    node_version: '20'
+    entrypoint: D:/_me/prog/ValLisetsky/agent-strands-bedrock/main.py
+    deployment_type: container
+    runtime_type: null
+    platform: linux/arm64
+    container_runtime: docker
+    source_path: D:\_me\prog\ValLisetsky\agent-strands-bedrock
+    aws:
+      execution_role: arn:aws:iam::361450365243:role/AgentCoreRuntimeRole
+      execution_role_auto_create: true
+      account: '361450365243'
+      region: us-west-2
+      ecr_repository: 361450365243.dkr.ecr.us-west-2.amazonaws.com/bedrock-agentcore-main
+      ecr_auto_create: false
+      s3_path: null
+      s3_auto_create: false
+      network_configuration:
+        network_mode: PUBLIC
+        network_mode_config: null
+      protocol_configuration:
+        server_protocol: HTTP
+      observability:
+        enabled: true
+      lifecycle_configuration:
+        idle_runtime_session_timeout: null
+        max_lifetime: null
+    bedrock_agentcore:
+      agent_id: main-F0HN19CcAN
+      agent_arn: arn:aws:bedrock-agentcore:us-west-2:361450365243:runtime/main-F0HN19CcAN
+      agent_session_id: a22f751a-0caf-4f23-8342-e714980005fb
+    codebuild:
+      project_name: bedrock-agentcore-main-builder
+      execution_role: arn:aws:iam::361450365243:role/AmazonBedrockAgentCoreSDKCodeBuild-us-west-2-0d6e4079e3
+      source_bucket: bedrock-agentcore-codebuild-sources-361450365243-us-west-2
+    memory:
+      mode: STM_AND_LTM
+      memory_id: OrderCancellationAgentMemory-w5N1rK2000
+      memory_arn: null
+      memory_name: main_memory
+      event_expiry_days: 30
+      first_invoke_memory_check_done: false
+      was_created_by_toolkit: false
+    identity:
+      credential_providers: []
+      workload: null
+    aws_jwt:
+      enabled: false
+      audiences: []
+      signing_algorithm: ES384
+      issuer_url: null
+      duration_seconds: 300
+    authorizer_configuration: null
+    request_header_configuration: null
+    oauth_configuration: null
+    api_key_env_var_name: null
+    api_key_credential_provider_name: null
+    is_generated_by_agentcore_create: false

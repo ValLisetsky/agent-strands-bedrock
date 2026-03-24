@@ -24,7 +24,7 @@ Create a `.env` file (loaded via `python-dotenv`):
 
 ```
 CLOUD_MODEL_NAME=<bedrock-model-id>   # required for cloud mode
-AWS_REGION=us-east-1                  # optional, defaults to us-east-1
+AWS_REGION=us-west-2                  # optional, defaults to us-west-2
 LOCAL_MODEL_NAME=qwen2.5:7b-instruct  # optional, defaults to qwen2.5:7b-instruct
 ```
 

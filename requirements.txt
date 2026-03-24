@@ -1,4 +1,7 @@
 strands-agents
 strands-agents[ollama]
+bedrock-agentcore[strands-agents]
+bedrock-agentcore-starter-toolkit
 boto3
 python-dotenv
+chardet>=3.0.2,<6.0.0  # prance pulls 7.x but requests 2.32.x requires <6

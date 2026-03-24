@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "mcp__strands__search_docs"
+      "mcp__strands__search_docs",
+      "mcp__strands__fetch_doc"
     ]
   }
 }
